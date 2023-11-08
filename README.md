@@ -9,21 +9,28 @@
 <h1 align="center">Tauri Vite App Template</h1>
 
 <p align="center">
-  <img alt="Github release" src="https://img.shields.io/github/release/ddki/tauri-vite-app-template">
-
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/ddki/tauri-vite-app-template">
-
+  <a href="https://github.com/ddki/tauri-vite-app-template/releases">
+    <img alt="Github release" src="https://img.shields.io/github/release/ddki/tauri-vite-app-template">
+  </a>
+  <a href="#">
+    <img alt="Github top language" src="https://img.shields.io/github/languages/top/ddki/tauri-vite-app-template">
+  </a>
   <!-- <img alt="Github language count" src="https://img.shields.io/github/languages/count/ddki/tauri-vite-app-template"> -->
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ddki/tauri-vite-app-template">
-
-  <img alt="License" src="https://img.shields.io/github/license/ddki/tauri-vite-app-template">
-
+  <a href="#">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/ddki/tauri-vite-app-template">
+  </a>
+  <a href="https://github.com/ddki/tauri-vite-app-template/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/ddki/tauri-vite-app-template">
+  </a>
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/ddki/tauri-vite-app-template" /> -->
 
-  <img alt="Github forks" src="https://img.shields.io/github/forks/ddki/tauri-vite-app-template" />
-
-  <img alt="Github stars" src="https://img.shields.io/github/stars/ddki/tauri-vite-app-template" />
+  <a href="https://github.com/ddki/tauri-vite-app-template/forks">
+    <img alt="Github forks" src="https://img.shields.io/github/forks/ddki/tauri-vite-app-template" />
+  </a>
+  <a href="https://github.com/ddki/tauri-vite-app-template/stargazers">
+    <img alt="Github stars" src="https://img.shields.io/github/stars/ddki/tauri-vite-app-template" />
+  </a>
 </p>
 
 <!-- Status
