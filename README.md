@@ -95,12 +95,23 @@ pnpm tauri:build
 ### Generate changelog file
 
 ```sh
-pnpm script:changelog
+pnpm changelog
 ```
 
 ### Generate Release
 
 ```sh
+pnpm release
+```
+
+## 如何发布版本
+
+```bash
+# 第一步 暂存修改
+git add -A
+# 第二步 提交修改
+pnpm commit
+# 第三步 发布版本
 pnpm release
 ```
 
