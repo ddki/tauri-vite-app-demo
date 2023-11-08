@@ -1,6 +1,6 @@
 {
 	"name": "tauri-vite-app-demo",
-	"version": "1.0.19",
+	"version": "0.1.0",
 	"author": "ddki",
 	"private": true,
 	"type": "module",
