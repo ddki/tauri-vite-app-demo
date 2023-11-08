@@ -90,10 +90,6 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-## :white_check_mark: Requirements
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Node](https://nodejs.org/en/), [Rust](https://www.rust-lang.org/) installed.
-
 ### Tauri updater with [Tauri](https://next--tauri.netlify.app/next/guides/distribution/updater)
 
 #### :ferris_wheel: Setting for Github
@@ -122,6 +118,10 @@ cargo install cargo-edit
 # upgrade
 cargo upgrade
 ```
+
+## :white_check_mark: Requirements
+
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Node](https://nodejs.org/en/), [Rust](https://www.rust-lang.org/) installed.
 
 ## :checkered_flag: Starting
 
