@@ -40,10 +40,12 @@
 </template>
 
 <script setup lang="ts">
-import { invoke } from '@tauri-apps/api'
+import { invoke } from '@tauri-apps/api/primitives'
 import { emit, listen } from '@tauri-apps/api/event'
-import { appWindow, WebviewWindow } from '@tauri-apps/plugin-window'
+import { getCurrent, Window } from '@tauri-apps/plugin-window'
 import { onMounted, reactive, ref } from 'vue'
+
+const appWindow = getCurrent()
 
 const state = reactive({
 	fontGrobalListenEvent: {
@@ -108,7 +110,7 @@ const appWindowEvent = () => {
 }
 const webViewWindowEvent = () => {
 	console.log('webViewWindowEvent')
-	const webview = new WebviewWindow('window')
+	const webview = new Window('window')
 	webview.emit('event')
 }
 </script>

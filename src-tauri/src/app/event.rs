@@ -76,7 +76,7 @@ pub fn build_menu_evnet<R: Runtime>(app_handle: &AppHandle<R>, event: MenuEvent)
                 .get_window("main")
                 .unwrap()
                 .shell()
-                .open("https://github.com/ddki/tauri-vite-app-demo/issues", None)
+                .open("https://github.com/ddki/tauri-vite-app-template/issues", None)
                 .unwrap();
         }
         "github" => {
@@ -84,7 +84,7 @@ pub fn build_menu_evnet<R: Runtime>(app_handle: &AppHandle<R>, event: MenuEvent)
                 .get_window("main")
                 .unwrap()
                 .shell()
-                .open("https://github.com/ddki/tauri-vite-app-demo", None)
+                .open("https://github.com/ddki/tauri-vite-app-template", None)
                 .unwrap();
         }
         "check_update" => {

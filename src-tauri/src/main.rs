@@ -3,7 +3,9 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::{menu::MenuEvent, Manager, window::PageLoadEvent};
+use std::{thread::sleep, time::Duration};
+
+use tauri::{menu::MenuEvent, window::PageLoadEvent, Manager};
 
 mod app;
 pub mod utils;
@@ -49,7 +51,10 @@ fn main() {
                 });
             }
         })
-        .invoke_handler(tauri::generate_handler![crate::app::event::greet])
+        .invoke_handler(tauri::generate_handler![
+            crate::app::event::greet,
+            // crate::app::window::close_splashscreen
+        ])
         .menu(|handle| app::menu::build_menu(handle))
         .setup(|app| {
             let handle = app.handle();
@@ -58,6 +63,7 @@ fn main() {
             let main_window = app.get_window("main").unwrap();
             tauri::async_runtime::spawn(async move {
                 splashscreen_window.close().unwrap();
+								sleep(Duration::from_secs(5));
                 main_window.show().unwrap();
             });
             // 任务栏图标

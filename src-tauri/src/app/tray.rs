@@ -3,6 +3,7 @@ use tauri::{
     tray::{ClickType, TrayIconBuilder},
     Manager, Runtime,
 };
+use tauri_plugin_shell::ShellExt;
 
 
 pub fn create_tray<R: Runtime>(app_handle: &tauri::AppHandle<R>) -> tauri::Result<()> {
@@ -30,7 +31,60 @@ pub fn create_tray<R: Runtime>(app_handle: &tauri::AppHandle<R>) -> tauri::Resul
         .icon(app_handle.default_window_icon().unwrap().clone())
         .menu(&menu)
         .menu_on_left_click(false)
-        .on_menu_event(move |app, event| super::event::build_menu_evnet(app, event))
+        .on_menu_event(move |app_handle, event| match event.id.as_ref() {
+					// 主程序和任务栏图标共有
+					"main" => {
+							let window = app_handle.get_window("main").unwrap();
+							if !window.is_visible().unwrap_or_default() {
+								let _ = window.show();
+								let _ = window.set_focus();
+							}
+							window.eval("window.location.replace('#/')").unwrap();
+					}
+					"setting" => {
+							let window = app_handle.get_window("main").unwrap();
+							if !window.is_visible().unwrap_or_default() {
+								let _ = window.show();
+								let _ = window.set_focus();
+							}
+							let _ = window.eval("window.location.replace('#/setting')").unwrap();
+					}
+					"about" => {
+							let window = app_handle.get_window("main").unwrap();
+							window.hide().unwrap();
+							super::window::open_about(window.app_handle());
+							println!("tray menu: click about menu");
+					}
+					"wiki" => {
+							let window = app_handle.get_window("main").unwrap();
+							window.hide().unwrap();
+							super::window::open_wiki(window.app_handle());
+							println!("tray menu: click wiki menu");
+					}
+					"issues" => {
+							app_handle
+									.get_window("main")
+									.unwrap()
+									.shell()
+									.open("https://github.com/ddki/tauri-vite-app-template/issues", None)
+									.unwrap();
+					}
+					"github" => {
+							app_handle
+									.get_window("main")
+									.unwrap()
+									.shell()
+									.open("https://github.com/ddki/tauri-vite-app-template", None)
+									.unwrap();
+					}
+					"check_update" => {
+							println!("check_update...");
+					}
+					"quit" => {
+							std::process::exit(0);
+					}
+					_ => {}
+				})
         .on_tray_icon_event(|tray, event| {
             if event.click_type == ClickType::Left {
                 let app = tray.app_handle();
