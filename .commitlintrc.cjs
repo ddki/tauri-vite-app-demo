@@ -29,9 +29,21 @@ module.exports = {
 			confirmCommit: '是否提交或修改commit ?'
 		},
 		types: [
-			{ value: 'feat', name: 'feat:     ✨ 新增功能 | A new feature', emoji: ':sparkles:' },
-			{ value: 'fix', name: 'fix:      🐛 修复缺陷 | A bug fix', emoji: ':bug:' },
-			{ value: 'docs', name: 'docs:     📝 文档更新 | Documentation only changes', emoji: ':memo:' },
+			{
+				value: 'feat',
+				name: 'feat:     ✨ 新增功能 | A new feature',
+				emoji: ':sparkles:'
+			},
+			{
+				value: 'fix',
+				name: 'fix:      🐛 修复缺陷 | A bug fix',
+				emoji: ':bug:'
+			},
+			{
+				value: 'docs',
+				name: 'docs:     📝 文档更新 | Documentation only changes',
+				emoji: ':memo:'
+			},
 			{
 				value: 'style',
 				name: 'style:    💄 代码格式 | Changes that do not affect the meaning of the code',
@@ -42,7 +54,11 @@ module.exports = {
 				name: 'refactor: ♻️ 代码重构 | A code change that neither fixes a bug nor adds a feature',
 				emoji: ':recycle:'
 			},
-			{ value: 'perf', name: 'perf:     ⚡️ 性能提升 | A code change that improves performance', emoji: ':zap:' },
+			{
+				value: 'perf',
+				name: 'perf:     ⚡️ 性能提升 | A code change that improves performance',
+				emoji: ':zap:'
+			},
 			{
 				value: 'test',
 				name: 'test:     ✅ 测试相关 | Adding missing tests or correcting existing tests',
@@ -58,7 +74,11 @@ module.exports = {
 				name: 'ci:       🎡 持续集成 | Changes to our CI configuration files and scripts',
 				emoji: ':ferris_wheel:'
 			},
-			{ value: 'revert', name: 'revert:   ⏪️ 回退代码 | Revert to a commit', emoji: ':rewind:' },
+			{
+				value: 'revert',
+				name: 'revert:   ⏪️ 回退代码 | Revert to a commit',
+				emoji: ':rewind:'
+			},
 			{
 				value: 'chore',
 				name: 'chore:    🔨 其他修改 | Other changes that do not modify src or test files',
